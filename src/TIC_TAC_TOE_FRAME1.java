@@ -20,14 +20,14 @@ public class TIC_TAC_TOE_FRAME1 extends javax.swing.JFrame {
    private int oCount;
    private int totalCount;
    
-    public TIC_TAC_TOE_FRAME1() {
+    public TIC_TAC_TOE_FRAME1() {   //Tic_tac_toe as constructor
         initComponents();
         turn = "O";
         xCount = 0;
         oCount = 0;
         totalCount = 0;
     }
-    private void choosePlayer(){
+    private void choosePlayer(){   //setting value of turn as 0 or x
         
         if(turn.equals("O")){
             
@@ -37,7 +37,7 @@ public class TIC_TAC_TOE_FRAME1 extends javax.swing.JFrame {
             turn = "O";
         }
     }
-    public void updateScore(){
+    public void updateScore(){  
         
         xscore.setText(String.valueOf(xCount));
         oscore.setText(String.valueOf(oCount));
@@ -55,7 +55,7 @@ public class TIC_TAC_TOE_FRAME1 extends javax.swing.JFrame {
         String b8 = button8.getText();
         String b9 = button9.getText();
         
-        if((b1.equals(b2) && b2.equals(b3)) && !b1.equals("")){
+        if((b1.equals(b2) && b2.equals(b3)) && !b1.equals("")){  //cheacking if both the vaues are equals then we have to check for only single buttons
             
             JOptionPane.showMessageDialog(this,"Player " + turn + " wins","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
             
